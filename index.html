@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+
+  </head>
+
+  <body>
+    <audio id="tricou-firma" src="sounds/tricou-firma.m4a"></audio>
+    <audio id="boo" src="boo.mp3"></audio>
+    <audio id="9lei" src="sounds/9lei.m4a"></audio>
+    <audio id="Shery" src="sounds/Shery.m4a"></audio>
+    <div class="container">
+      <div class="center">
+        <div id="buttons"></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const sounds = ['tricou-firma', 'boo', '9lei', 'Shery']
+      sounds.forEach(sound => {
+        const btn = document.createElement('button')
+        btn.classList.add('btn')
+        btn.innerText = sound
+        btn.addEventListener('click', () => {
+          stopSongs()
+          document.getElementById(sound).play()
+        })
+
+        document.getElementById('buttons').appendChild(btn)
+      })
+
+      function stopSongs() {
+        sounds.forEach(sound => {
+          const song = document.getElementById(sound)
+
+          song.pause()
+          song.currentTime = 0;
+        })
+      }
+
+    </script>
+  </body>
+</html>

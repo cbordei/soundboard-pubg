@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  background-color: black;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  min-width: 100px;
+  height: 100px;
+  margin-left: 10px;
+  border-radius: 4px;
+  border: 1px solid rgb(175, 13, 175);
+  cursor: pointer;
+  color: rgb(105, 10, 105);
+  font-weight: 600;
+}
