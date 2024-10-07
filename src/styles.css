@@ -24,7 +24,7 @@ button {
 
 @media only screen and (max-device-width: 600px) {
   body {
-    background-color: lightslategray;
+    background-color: black;
   }
   button {
     width: 300px;
